@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body class="login">
+  <!-- Bootstrap Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <img src="images/encourage.png" alt="Your Logo" width="100" class="header-logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="container">
+      <div class="row no-gutters shadow-lg">
+        <div class="col-md-6 d-none text-center d-flex align-item-center justify-content-center">
+          <img
+            src="images/trophy.jpg"
+            class="img-fluid"/>
+        </div>
+        <div class="col-md-6 bg-white p-5">
+          <div id="loginSection">
+            <h3 class="pb-3 form_header">Login</h3>
+            <div class="form-style">
+              <form id="loginForm" onsubmit="return false">
+                <div class="form-group pb-3 floating-label">
+                  <input for="Username" type="input" placeholder=" " class="form-control" id="username"
+                    aria-describedby="emailHelp" />
+                  <label for="username">UserName</label>
+                </div>
+                <div class="form-group pb-3 floating-label">
+                  <input type="password" placeholder=" " class="form-control" id="password" />
+                  <label for="password">Password</label>
+                  <i class="fas fa-eye-slash"
+                    style="position: absolute; top: 37%; right: 10px; transform: translateY(-50%); cursor: pointer;"
+                    id="togglePassword"></i>
+                </div>
+                <div class="form-group">
+                  <div class="custom-control custom-checkbox  rememberMe">
+                    <input type="checkbox" class="custom-control-input" id="customCheck" name="example1">
+                    <label class="custom-control-label" for="customCheck">Remember Me</label>
+                  </div>
+                </div>
+                
+                <div class="pb-2">
+                  <button class="submit-button mt-2  main-btn btn w-100" type="submit">
+                    Submit
+                  </button>
+                </div>
+                <div class="pb-2 multi_btn ">
+                  <a href="#" id="showSignup">Sign Up</a>
+                  <a href="#" id="showForgotPassword">Forgot Password</a>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div id="signupSection" style="display: none;">
+            <h3 class="pb-3 form_header">Sign Up</h3>
+            <div class="form-style">
+              <form id="signupForm" onsubmit="return false">
+                <div class="form-group pb-3 floating-label">
+                  <input for="NewUsername" type="input" placeholder=" " class="form-control" id="newUsername"
+                    aria-describedby="newEmailHelp" />
+                  <label for="newUsername">New Email</label>
+                </div>
+                <div class="form-group pb-3 floating-label">
+                  <input type="password" placeholder=" " class="form-control" id="newPassword" />
+                  <label for="newPassword">New Password</label>
+                  <i class="fas fa-eye-slash"
+                    style="position: absolute; top: 50%; right: 10px; transform: translateY(-50%); cursor: pointer;"
+                    id="toggleNewPassword"></i>
+                </div>
+                <div class="pb-2">
+                  <button class="submit-button mt-2  main-btn btn w-100" type="submit" class="btn btn-dark w-100 font-weight-bold mt-2">
+                    Sign Up
+                  </button>
+                </div>
+                <div class="pb-2">
+                  <button class="back-button btn-outline-primary" id="goBackSignup">Back</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div id="forgotPasswordSection" style="display: none;">
+            <h3 class="pb-3 form_header">Forgot Password</h3>
+            <div class="form-style">
+              <form id="forgotPasswordForm" onsubmit="return false">
+                <div class="form-group pb-3 floating-label">
+                  <input for="ForgotUsername" type="input" placeholder=" " class="form-control" id="forgotUsername"
+                    aria-describedby="forgotEmailHelp" />
+                  <label for="forgotUsername">Email</label>
+                </div>
+                <div class="pb-2">
+                  <button class="submit-button mt-2  main-btn btn w-100" type="submit" class="btn btn-dark w-100 font-weight-bold mt-2">
+                    Send Reset Email
+                  </button>
+                </div>
+                <div class="pb-2">
+                  <button class="back-button btn-outline-primary" id="goBackForgotPassword">Back</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/login.js"></script>
+ 
+  <div class="modal fade" id="loginErrorModal" tabindex="-1" role="dialog" aria-labelledby="loginErrorModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginErrorModalLabel">Login Failed</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Login failed. Please check your credentials.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="apiErrorModal" tabindex="-1" role="dialog" aria-labelledby="apiErrorModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="apiErrorModalLabel">Server Unavailable</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                The server is currently unavailable. Please try again later.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+</html>

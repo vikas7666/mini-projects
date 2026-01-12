@@ -1,0 +1,37 @@
+body {
+    background: #c9ccd1;
+}
+
+.table_wrapper {
+    overflow-y: auto;
+    max-height: 450px;
+}
+
+.employee_table tr td,
+.employee_table tr th {
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+    vertical-align: middle;
+    border: 1px solid #444774;
+}
+
+.employee_table th {
+    background-color: #3a2d7d;
+    font-weight: bold;
+    color: #fff;
+}
+
+.header {
+    color: #C35516;
+}
+
+.header span {
+    color: #C35516;
+    font-weight: bold;
+}
+
+.badge_icons {
+    width: 30px;
+}
+

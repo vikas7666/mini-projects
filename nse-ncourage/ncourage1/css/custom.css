@@ -1,0 +1,68 @@
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+      width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+      background: #ffffff;
+  }
+
+  *::-webkit-scrollbar-thumb {
+      background-color: #b4b4b49c;
+      border-radius: 10px;
+      border: 3px solid #ffffff;
+  }
+
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+      scrollbar-width: auto;
+      scrollbar-color: #546ba0 #ffffff;
+  }
+
+  
+
+.form-style input {
+    border: 0;
+    height: 50px;
+    border-radius: 0;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.form-style input:focus {
+    border-bottom: 1px solid #007bff;
+    box-shadow: none;
+    outline: 0;
+    background-color: #ebebeb;
+}
+
+.sideline {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ccc;
+}
+
+button.submit {
+    height: 50px;
+}
+
+.sideline:before,
+.sideline:after {
+    content: '';
+    border-top: 1px solid #ebebeb;
+    margin: 0 20px 0 0;
+    flex: 1 0 20px;
+}
+
+.sideline:after {
+    margin: 0 0 0 20px;
+}
+.add_points{
+    color: #444774;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
