@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div#quoteDisplay {
+            padding: 10px;
+            background-color: aliceblue;
+            border-radius: 5px;
+            text-align: center;
+            color: red;
+        }
+
+        button {
+            width: 100px;
+            margin: 0 auto;
+            float: none;
+            display: block;
+            margin-top: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="quoteDisplay"></div>
+    <button>New Quotes</button>
+    <script> 
+        var quotes = [
+            'Not visible to the surveyors (their rules and scripts do not get executed)',
+            'Get the value assigned based on a calculation done on other questions',
+            'Lets look at an example survey that first asks 2 general questions in order to classify the respondent',
+            'Questions Q1-Q4 contain the same answer scale. Q5 is a question inside a loop chapter, and the ',
+            'needed logic is to iterate on all the answers that were coded through Q1-Q4. So, instead of generating ',
+            'Dummy text is text that is used in the publishing industry or by web designers to occupy the space which will later be filled',
+            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'
+        ]
+
+        document.querySelector("button").addEventListener("click", myFunction);
+        function myFunction() {
+            var ranomDomNumber = Math.floor(Math.random() * (quotes.length));
+            document.getElementById('quoteDisplay').innerHTML = quotes[ranomDomNumber];
+        }
+       
+    </script>
+</body>
+
+</html>
