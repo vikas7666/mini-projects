@@ -1,0 +1,80 @@
+body {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+/************************** header **************************/
+
+.bg-blue{background: #3A2E7D;}
+.ticker-list{color:#fff; padding:7px 0px;}
+.green-color{color:#14B908 !important;}
+.red-color{color:#FF3232 !important;}
+.ticker-list ul.list-inline{margin-bottom: 0px;}
+.ticker-list .list-inline li{margin: 0px 10px;vertical-align: middle;}
+.ticker-list .list-inline li:after{content: "|"; position: absolute;  margin-left: 10px; color:#fff;}
+.ticker-list .list-inline li:last-child:after{content: ""; position: absolute;  margin-left: 0px;}
+.ticker-list .list-inline li a{color:#fff; text-decoration: none;}
+.ticker-list .list-inline li a:hover{color:#EFB41D; text-decoration: none; transition: 0.5s ease;}
+
+/*ref-link : https://codepen.io/sekane81/pen/mJBYze*/
+.marquee .track{
+  display:block;
+position:relative;
+/*
+width:800px;
+height:160px;
+*/
+    width: 100vw;
+  max-width: 100%;
+  height: auto;
+animation:scroll 10s linear infinite;
+}
+.marquee .track:hover {
+    animation-play-state: paused
+}
+
+/* Make it move */
+@keyframes scroll{
+0% {left:800px;}
+100% {left:-800px;}
+}
+
+/*ref-link : https://codepen.io/sekane81/pen/mJBYze*/
+
+ .blink {
+    animation: blink 1s linear infinite;
+  }
+  @keyframes blink {
+    0% {
+      opacity: 0.25;
+    }
+    50% {
+      opacity: .5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+.pulse {
+    animation: pulse 2s  ease-in-out infinite;
+    display: inline-block
+}
+@keyframes pulse {
+    0% {
+        transform: scaleX(1);
+        opacity: .75;
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1.1)
+    }
+
+    to {
+        transform: scale3d(1)
+            
+    }
+}
+
+
